@@ -132,4 +132,7 @@ USE_CLANG_PLATFORM_BUILD := true
 # Disable dex-preopt of prebuilts to save space.
 DONT_DEXPREOPT_PREBUILTS := true
 
--include vendor/motorola/shamu/BoardConfigVendor.mk
+# Qualcomm Time Services
+BOARD_USES_QC_TIME_SERVICES := true
+
+#-include vendor/moto/shamu/BoardConfigVendor.mk
