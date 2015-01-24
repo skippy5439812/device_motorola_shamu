@@ -114,7 +114,10 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
-TARGET_RECOVERY_FSTAB = device/motorola/shamu/fstab.shamu
+TARGET_RECOVERY_FSTAB = device/moto/shamu/fstab.shamu
+
+# Ensure f2fstools are built
+TARGET_USERIMAGES_USE_F2FS := true
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/motorola/shamu
 
