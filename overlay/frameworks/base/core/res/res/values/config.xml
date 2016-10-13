@@ -257,6 +257,7 @@
 
     <!--  Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">4</integer>
+
     <!--  Whether Multiuser UI should be shown -->
     <bool name="config_enableMultiUserUI">true</bool>
 
@@ -356,6 +357,18 @@
     <!-- enable doze powersaving mode -->
     <bool name="config_enableAutoPowerModes">true</bool>
 
+    <!-- set proper wifi power ratios -->
+    <integer name="config_wifi_idle_receive_cur_ma">1</integer>
+    <integer name="config_wifi_active_rx_cur_ma">100</integer>
+    <integer name="config_wifi_tx_cur_ma">250</integer>
+    <integer name="config_wifi_operating_voltage_mv">3800</integer>
+
+    <!-- set proper bluetooth power ratios -->
+    <integer name="config_bluetooth_idle_cur_ma">5</integer>
+    <integer name="config_bluetooth_rx_cur_ma">17</integer>
+    <integer name="config_bluetooth_tx_cur_ma">46</integer>
+    <integer name="config_bluetooth_operating_voltage_mv">3500</integer>
+
     <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveNotificationLed">true</bool>
 
@@ -368,14 +381,16 @@
     <!-- Default LED off time for notification LED in milliseconds. -->
     <integer name="config_defaultNotificationLedOff">9000</integer>
 
+    <!-- Does the notification LED support multiple colors? Used to decide if the user can change the colors -->
+    <bool name="config_multiColorNotificationLed">true</bool>
+
     <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveBatteryLed">true</bool>
 
-    <!-- Does the notification LED support multiple colors?
-         Used to decide if the user can change the colors -->
-    <bool name="config_multiColorNotificationLed">true</bool>
-
     <!-- Does the battery LED support multiple colors? Used to decide if the user can change the colors -->
     <bool name="config_multiColorBatteryLed">true</bool>
+
+    <!-- Do the battery/notification LEDs support pulsing? Used to decide if we show pulse settings -->
+    <bool name="config_ledCanPulse">false</bool>
 
 </resources>
