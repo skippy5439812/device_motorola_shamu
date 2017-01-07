@@ -1,6 +1,5 @@
 #
-# Copyright 2014 The Android Open Source Project
-# Copyright 2016 Nitrogen Project
+# Copyright 2013 The Android Open Source Project
 # Copyright 2017 UnholyDevs Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,4 +15,17 @@
 # limitations under the License.
 #
 
-add_lunch_combo unholy_shamu-userdebug
+# Sample: This is where we'd set a backup provider if we had one
+# $(call inherit-product, device/sample/products/backup_overlay.mk)
+
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
+PRODUCT_NAME := full_shamu
+PRODUCT_DEVICE := shamu
+PRODUCT_BRAND := Android
+PRODUCT_MODEL := Nexus 6
+PRODUCT_MANUFACTURER := motorola
+
+$(call inherit-product, device/motorola/shamu/device.mk)
+$(call inherit-product-if-exists, vendor/motorola/shamu/device-vendor.mk)
