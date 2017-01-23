@@ -1,0 +1,12 @@
+[
+  {
+    "repository": "kernel_motorola_shamu",
+    "target_path": "kernel/motorola/shamu",
+    "revision":    "n7"
+  },
+  {
+    "repository": "vendor_motorola",
+    "target_path": "vendor/motorola",
+    "revision":    "n7"
+  }
+]
