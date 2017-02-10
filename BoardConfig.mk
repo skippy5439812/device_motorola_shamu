@@ -19,6 +19,7 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := krait
+TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 
 ENABLE_CPUSETS := true
 
@@ -134,5 +135,8 @@ DONT_DEXPREOPT_PREBUILTS := true
 
 # Qualcomm Time Services
 BOARD_USES_QC_TIME_SERVICES := true
+
+# Enable workaround for slow rom flash
+BOARD_SUPPRESS_SECURE_ERASE := true
 
 #-include vendor/moto/shamu/BoardConfigVendor.mk
