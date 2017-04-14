@@ -145,4 +145,7 @@ BOARD_USES_QC_TIME_SERVICES := true
 # Enable workaround for slow rom flash
 BOARD_SUPPRESS_SECURE_ERASE := true
 
+# Compile libhwui in performance mode
+HWUI_COMPILE_FOR_PERF := true
+
 #-include vendor/moto/shamu/BoardConfigVendor.mk
